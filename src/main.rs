@@ -3,19 +3,7 @@ use std::println;
 use std::process;
 use serde::Deserialize;
 mod scanner;
-
-struct Frontmatter {
-    title: String,
-    date: String,
-    description: String
-}
-
-struct Page {
-    content: String,
-    generated: String,
-    destination: String
-}
-
+mod parser;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
