@@ -20,7 +20,7 @@ You will need [Rust and Cargo](https://www.rust-lang.org/tools/install) installe
 Clone the repository and build the project using Cargo:
 
 ```bash
-git clone [https://github.com/ansh3108/markdown-cli.git](https://github.com/ansh3108/markdown-cli.git)
+git clone https://github.com/ansh3108/markdown-cli.git
 cd markdown-cli
 cargo build --release
 ```
