@@ -1,8 +1,8 @@
 use core::panic;
-use std::fs;
 use serde::Deserialize;
 use pulldown_cmark::{Parser, html};
 
+#[allow(dead_code)]
 #[derive(Deserialize)]
 pub struct Frontmatter {
     pub title: String,
@@ -10,6 +10,7 @@ pub struct Frontmatter {
     pub description: String
 }
 
+#[allow(dead_code)]
 pub struct Page {
     pub frontmatter: Frontmatter,
     pub content: String,

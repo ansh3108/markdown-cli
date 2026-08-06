@@ -1,7 +1,6 @@
 use std::env;
 use std::println;
 use std::process;
-use serde::Deserialize;
 mod scanner;
 mod parser;
 
