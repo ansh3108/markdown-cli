@@ -1,6 +1,7 @@
 use core::panic;
 use std::fs;
 use serde::Deserialize;
+use pulldown_cmark::{Parser, html};
 
 #[derive(Deserialize)]
 pub struct Frontmatter {
@@ -31,10 +32,15 @@ pub fn parse_file(file_path: &str) -> Page {
     
     let frontmatter: Frontmatter = serde_yaml::from_str(yaml_str).expect("Failed to parse YAML");
 
+    let parser = Parser::new(markdown_content);
+    let mut html_output = String::new();
+
+    html::push_html(&mut html_output, parser);
+
     Page {
         frontmatter,
         content: markdown_content.to_string(),
-        generated: String::new(),
+        generated: html_output,
         destination: file_path.to_string(),
     }
 }
