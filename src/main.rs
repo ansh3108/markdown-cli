@@ -21,4 +21,13 @@ fn main() {
 
     let md_files = scanner::get_markdown_files(input_dir);
     println!("Found files: {:?}", md_files);
+
+    let md_files = scanner::get_markdown_files(input_dir);
+
+    for file in md_files {
+        let page = parser::parse_file(&file);
+        println!("Title: {}", page.frontmatter.title);
+        println!("HTML:\n{}", page.generated);    
+    }
+    
 }
