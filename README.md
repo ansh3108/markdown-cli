@@ -83,5 +83,8 @@ public/
 
 ## Dependencies
 
-- `serde` * `serde_yaml`: For deserializing YAML frontmatter into Rust structs.
+- `serde`&`serde_yaml`: For deserializing YAML frontmatter into Rust structs.
 - `pulldown-cmark`: A fast, CommonMark-compliant Markdown parser.
+
+
+<img width="643" height="193" alt="image" src="https://github.com/user-attachments/assets/0e8e557f-0c83-4fed-86b1-247cd9c6e74e" />
